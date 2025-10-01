@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.testcreate.project.repository.LoginMapper">
+   <!-- id가 LoginMapper 인터페이스에 정의된 메소드명과 일치해야 연결됨  --> 
+   <!-- resultType: 반환시킬 때 사용할 자료형. 여기서는 map({K, V}) type -->
+	<select id="loginList" resultType="map">
+		select id, user_id, password, name, phone, email, role 
+		from users 
+	</select>
+</mapper>
